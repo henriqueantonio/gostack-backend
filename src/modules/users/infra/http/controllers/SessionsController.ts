@@ -10,7 +10,7 @@ export default class SesssionsController {
 
     const autheticateUser = container.resolve(AuthenticateUserService);
 
-    const { user, token } = await autheticateUser.exectute({ email, password });
+    const { user, token } = await autheticateUser.execute({ email, password });
 
     delete user.password;
     delete user.created_at;
